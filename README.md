@@ -95,15 +95,12 @@ Use the PlatformIO toolbar at the bottom of VS Code:
 ## Display Layout
 
 ```
-┌──────────────────────────┐
-│ Temp Monitor             │  ← static header (white)
-│                          │
-│ Temp: 24.37 C            │  ← live reading  (cyan)
-│                          │
-│ Thresh: 30.00 C          │  ← static label  (yellow)
-│                          │
-│ Normal                   │  ← status        (green / red)
-└──────────────────────────┘
+
+Temp Monitor ← static header (white)
+Temp: 24.37 C  ← live reading  (cyan)
+Thresh: 30.00 C ← static label  (yellow)
+Normal ← status        (green / red)
+
 ```
 
 Once the temperature hits **THRESHOLD TEMPERATURE**, the status line switches to `THRESH BREACHED` (red) and stays latched — the alert never resets until you press RESET, even if the board cools down.
@@ -114,18 +111,11 @@ Once the temperature hits **THRESHOLD TEMPERATURE**, the status line switches to
 
 ```
 === STM32L432KC Temperature Monitor ===
-Threshold : 30.00 C
-Buzzer    : PA0 TIM2_CH1 ~3kHz
-Display   : SPI LCD 160x80
-TS_CAL1   (30C  @ 3.0V): 1452
-TS_CAL2   (130C @ 3.0V): 1768
-VREFINT_CAL    (@ 3.0V): 1489
 -------------------------------------------
 [   1] Temp: 24.13 C      (normal)
 [   2] Temp: 24.15 C      (normal)
 ...
 [  47] Temp: 30.02 C  <<< THRESHOLD! [LED+BUZZER]
-```
 
 ---
 
